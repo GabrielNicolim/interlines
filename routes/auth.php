@@ -71,19 +71,3 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
-
-/*
-Route::middleware('auth-company')->group(function () {
-    Route::get('/company-register', [CompanyController::class, 'create'])
-                ->name('company.create');
-
-    Route::post('/company-register', [CompanyController::class, 'store'])
-                ->name('company.store');
-
-    Route::get('/company-login', [CompanyController::class, 'loginForm'])
-                ->name('company.loginForm');
-
-    Route::post('/company-login', [CompanyController::class, 'login'])
-                ->name('company.login');
-});
-*/

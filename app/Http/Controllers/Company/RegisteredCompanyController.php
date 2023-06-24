@@ -25,7 +25,7 @@ class RegisteredCompanyController extends Controller
     {
         $request->validate([
             'cnpj' => 'required|unique:companies',
-            'fantasy-name' => 'required',
+            'name' => 'required',
             'country' => 'required',
             'email' => 'required|email|unique:companies',
             'password' => 'required|min:6',
@@ -33,7 +33,7 @@ class RegisteredCompanyController extends Controller
 
         $company = Company::create([
             'cnpj' => $request->cnpj,
-            'fantasy-name' => $request->name,
+            'name' => $request->name,
             'country' => $request->country,
             'email' => $request->email,
             'password' => Hash::make($request->password),

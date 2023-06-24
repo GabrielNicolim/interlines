@@ -8,7 +8,7 @@ import { Head, Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
     cnpj: "",
-    fantasy_name: "",
+    name: "",
     email: "",
     country: "",
     password: "",
@@ -44,10 +44,10 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
-                <InputLabel for="fantasy-name" value="Company Name" />
+                <InputLabel for="name" value="Company Name" />
 
                 <TextInput
-                    id="fantasy-name"
+                    id="name"
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.fantasy_name"
